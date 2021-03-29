@@ -34,8 +34,12 @@ module.exports = {
     lastUpdated: false,
     nav: [
       {
-        text: 'Introduction',
-        link: '/intro/',
+        text: 'Research',
+        link: '/research/',
+      },
+      {
+        text: 'Development',
+        link: '/development/',
       },
       {
         text: 'GitHub',
@@ -43,9 +47,18 @@ module.exports = {
       }
     ],
     sidebar: {
-      '/intro/': [
+      '/research/': [
         {
-          title: 'Chora',
+          title: 'Research',
+          collapsable: false,
+          children: [
+            '',
+          ]
+        }
+      ],
+      '/development/': [
+        {
+          title: 'Development',
           collapsable: false,
           children: [
             '',

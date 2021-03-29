@@ -3,7 +3,7 @@ home: true
 heroImage: img/chora.png
 tagline: explore outside the city proper
 actionText: Introduction →
-actionLink: /intro/
+actionLink: /research/
 features:
 - title: Chora Chain
   details: built with Cosmos SDK
