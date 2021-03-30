@@ -46,30 +46,6 @@ chorad start
 
 ## Run Regen Chain
 
-First, you will need to clone the remote repository for [regen-ledger](https://github.com/regen-network/regen-ledger).
-
-```sh
-git clone https://github.com/regen-network/regen-ledger
-```
-
-After you have cloned the remote repository, you will need to change into the local directory.
-
-```sh
-cd regen-ledger
-```
-
-Within the local repository, you will need to switch to the latest release candidate (`v1.0.0-rc0`).
-
-```sh
-git checkout v1.0.0-rc0
-```
-
-Once you have switched to the latest release candidate, you will need to install the `regen` binary.
-
-```sh
-make install
-```
-
 Using the `regen` binary, you will need to initialize the node.
 
 ```sh

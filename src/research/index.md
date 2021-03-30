@@ -1,12 +1,10 @@
 # Introduction
 
-Chora is becoming...
+[Chora](https://chora.io/) is a research project exploring the role of technology in regeneration with a focus on the use of decentralized blockchain protocols for commons governance and regenerative economics.
 
 <!-- ## Regeneration
 
-*What is the role of technology in regeneration?*
-
-The best time to start regenerating our planet and rebuilding local, bioregional, and planetary ecosystems and economies was yesterday.
+The best time to start regenerating our planet and rebuilding local and bioregional ecosystems and economies was yesterday.
 
 We are facing global warming, climate change, mass extinction, and total planetary collapse, and unfortunately there are no easy solutions.
 
@@ -16,30 +14,32 @@ New technologies will not save us alone. We have to change our culture, our habi
 
 We have to change the incentives... this is why **carbon credits** have become so popular recently. The pressure is being placed on corporations and goverments to offset their carbon footprint.
 
-We can realign the incentive structure with a carbon market, which is not a silver bullet but a step in the right direction. We can reimagine an economic system tied to natural resources. -->
+We can realign the incentive structure with a carbon market, which is not a silver bullet but a step in the right direction. We can reimagine an economic system tied to natural resources.
+
+How might DeFi lead climate finance? Climate finance is going to be a bigger industry than oil and gas. All of the public goods accounting works much bettter within a blockchain ecosytem. "I actually think that we're going to see this sort of dark horse use case of decentralized finance and infrastructure we are all building lead the way". -->
+
+## Green NFT
+
+The current focus of the project is research and development for the [Green NFT Hackathon](https://gitcoin.co/hackathon/green-nft/onboard).
+
+In response to concerns around the carbon footprint of minting and exchanging NFTs on the current Proof-of-Work version of Ethereum, conscientious artists and platforms are looking for ways to offset their carbon footprint or make use of infrastructure that is more energy efficient.
+
+Within the Ethereum ecosystem, there are scaling solutions that will reduce the energy cost as well as plans to switch Ethereum to a Proof-of-Stake consensus mechanism, which means partial solutions are already underway. Although significantly less energy will be consumed with such improvements, there will still always be an energy cost, which is where the purchasing of "eco credits" comes in.
 
 ## Regen Network
 
-Regen Network is focused on building ecosystem services and credits using an application specific blockchain. Regen Network's `regen-ledger` is built with Cosmos SDK and will be a Cosmos zone within the Cosmos ecosystem.
+[Regen Network](https://www.regen.network/) is a project focused on building ecosystem services and credits using an application specific blockchain. Regen Network's blockchain [`regen-ledger`](https://github.com/regen-network/regen-ledger) is built with [Cosmos SDK](https://github.com/cosmos/cosmos-sdk) and will be a Cosmos zone within the Cosmos ecosystem.
 
-Regen Network will be launching their mainnet version of `regen-ledger` mid-April with the `ibc` module enabled, which means any other blockchain with the `ibc` module enabled will be able to communicate with Regen Network.
+Within the Cosmos ecosystem, blockchains are able to communicate with each other using a protocol known as "interblockchain communication protocol" or [IBC](https://github.com/cosmos/ibc-go), which is defined as a module within the Cosmos SDK. Regen Network will be launching their mainnet version of `regen-ledger` mid-April with the `ibc` module enabled, which means other blockchains with the `ibc` module enabled will be able to communicate with Regen Network to integrate and purchase "eco credits".
 
-The `ibc` module is important to the use case of Regen Network because it enables the ability for other blockchains to integrate and purchase "eco credits" from `regen-ledger` *(note: the `ecocredit` module will not be enabled initially but enabled through an on-chain governance process)*.
+What about the purchase of "eco credits" outside the Cosmos ecosystem?
 
-The initial mainnet version of `regen-ledger` will allow for the exchange of the native `regen-ledger` token "REGEN", which is the token used in staking to secure the network, the token used to vote in on-chain governance processes, and the token used to pay fees for sending messages.
+## Gravity Bridge
 
-...
-
-<!-- As a consensus mechanism, Proof-of-Stake (PoS) is much more energy efficient than Proof-of-Work (PoW), but both still use energy and therefore accumulate a carbon footprint. Using `regen-ledger` with the `ibc` module will allow blockchains to offset their carbon footprint through the purchase of "eco credits" from Regen Network's `regen-ledger` using the `ecocredit` module.
+[Gravity Bridge](https://github.com/cosmos/gravity-bridge) is a blockchain bridge between the Cosmos ecosystem and Ethereum that currently supports the transfer ERC20 assets originating on Ethereum to a Cosmos based blockchain and back to Ethereum. The ability to transfer the equivelant of an ERC20 asset originating on a Cosmos based blockchain to an ERC20 representation on Ethereum is currently under development.
 
 ...
 
-The `ibc` module is what makes it possible for DeFi to lead climate finance. Climate finance is going to be a bigger industry than oil and gas. All of the public goods accounting works much bettter within a blockchain ecosytem. "I actually think that we're going to see this sort of dark horse use case of decentralized finance and infrastructure we are all building lead the way".
+## So What Now?
 
 ...
-
-The `ecocredit` module defines fractional NFTs...
-
-...
-
-Regen Network's `ecodata` module allows for tracking data related to ecological claims both on and off-chain. -->
