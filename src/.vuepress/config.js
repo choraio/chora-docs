@@ -62,6 +62,8 @@ module.exports = {
           collapsable: false,
           children: [
             '',
+            '/development/chora-chora.md',
+            '/development/chora-regen.md',
           ]
         }
       ],
