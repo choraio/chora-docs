@@ -1,6 +1,8 @@
 # Overview
 
-In this section, you will be testing communication between `chora-chain` and `regen-ledger` using the `ibc` module *(and then minting and exchanging eco credits using the `ecocredit` module?)*.
+In order to demonstrate communication between blockchains, we will first test the communication between two instances of `chora-chain`, and then between `chora-chain` and `regen-ledger`, both making use of the `ibc` module built with the [Cosmos SDK](https://github.com/cosmos/cosmos-sdk).
+
+Once we have demonstrated communication between blockchains, we will be testing the minting and exchanging of "eco credits" using the `ecocredit` module within `regen-ledger`.
 
 ## Prerequisites
 
@@ -36,11 +38,7 @@ Within the local repository, run the following command to install the `chorad` b
 make install
 ```
 
-Now that the `chorad` binary is installed, change back to your working directory.
-
-```sh
-cd ../../
-```
+Now that the `chorad` binary is installed, you are ready to start and run `chora-chain`.
 
 ### Install Regen
 
@@ -67,5 +65,9 @@ After switching versions, run the following command to install the `regen` binar
 ```sh
 make install
 ```
+
+Now that the `regen` binary is installed, you are ready to start and run `regen-ledger`.
+
+## What's Next?
 
 Now that you have the binaries installed for running `chora-chain` and `regen-ledger` (`chorad` and `regen` respectively), you are ready to begin testing the `ibc` module.
