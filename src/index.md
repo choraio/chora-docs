@@ -1,7 +1,7 @@
 ---
 home: true
 heroImage: img/chora.png
-tagline: explore outside the city proper
+tagline: the grass is always greener on the decentralized web
 actionText: Introduction →
 actionLink: /research/
 features:

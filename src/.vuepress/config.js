@@ -53,12 +53,13 @@ module.exports = {
           collapsable: false,
           children: [
             '',
+            '/research/green-nft.md',
           ]
         }
       ],
       '/development/': [
         {
-          title: 'Development',
+          title: 'Testing',
           collapsable: false,
           children: [
             '',
