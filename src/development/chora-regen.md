@@ -23,7 +23,7 @@ MY_VALIDATOR_ADDRESS=$(chorad keys show $KEY_NAME -a)
 Now that you have generated a validator keypair, you will need to add the public address to the genesis file along with an initial amount of stake.
 
 ```sh
-chorad add-genesis-account $MY_VALIDATOR_ADDRESS 100000000stake
+chorad add-genesis-account $MY_VALIDATOR_ADDRESS 1000000stake
 ```
 
 Then you will need to create the genesis transaction.
@@ -65,7 +65,7 @@ MY_VALIDATOR_ADDRESS=$(regen keys show $KEY_NAME -a)
 Now that you have generated a validator keypair, you will need to add the public address to the genesis file along with an initial amount of stake.
 
 ```sh
-regen add-genesis-account $MY_VALIDATOR_ADDRESS 100000000stake
+regen add-genesis-account $MY_VALIDATOR_ADDRESS 1000000stake
 ```
 
 Then you will need to create the genesis transaction.

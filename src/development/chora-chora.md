@@ -4,6 +4,8 @@ In this section, you will testing the `ibc` module using two instances of `chora
 
 ## Run First Chain
 
+*Note: The following commands should be run from within the `chora-chain` repository, which is also being used as the `home` directory for the purpose of testing (i.e. `--home .chora-1`).*
+
 Using the `chorad` binary, you will need to initialize the node for the first chain (`chora-1`).
 
 ```sh
@@ -23,7 +25,7 @@ MY_VALIDATOR_ADDRESS=$(chorad keys show $KEY_NAME --home .chora-1 -a)
 Now that you have generated a validator key, you will need to add the public address to the genesis file along with an initial amount of stake.
 
 ```sh
-chorad add-genesis-account $MY_VALIDATOR_ADDRESS 100000000stake --home .chora-1 
+chorad add-genesis-account $MY_VALIDATOR_ADDRESS 1000000stake --home .chora-1 
 ```
 
 Then you will need to create the genesis transaction.
@@ -46,10 +48,12 @@ chorad start --home .chora-1
 
 ## Run Second Chain
 
+*Note: The following commands should be run from within the `chora-chain` repository, which is also being used as the `home` directory for the purpose of testing (i.e. `--home .chora-2`).*
+
 Using the `chorad` binary, you will need to initialize the node for the second chain (`chain-2`).
 
 ```sh
-chorad init node-2 --home .chora-2 --chain-id chain-2
+chorad init node-2 --home .chora-2 --chain-id chora-2
 ```
 
 Once the node has been initialized, you will need to create a validator key and then store the address of the validator for later use.
@@ -65,7 +69,7 @@ MY_VALIDATOR_ADDRESS=$(chorad keys show $KEY_NAME --home .chora-2 -a)
 Now that you have generated a validator key, you will need to add the public address to the genesis file along with an initial amount of stake.
 
 ```sh
-chorad add-genesis-account $MY_VALIDATOR_ADDRESS 100000000stake --home .chora-2 
+chorad add-genesis-account $MY_VALIDATOR_ADDRESS 1000000stake --home .chora-2 
 ```
 
 Then you will need to create the genesis transaction.
@@ -88,4 +92,43 @@ chorad start --home .chora-2 --grpc.address 0.0.0.0:9191 --p2p.laddr tcp://127.0
 
 ## Run Chain Relayer
 
-...
+*Note: The following commands should be run from within the `chora-chain` repository, which is also being used as the `home` directory for the purpose of testing (i.e. `--home .relayer`).*
+
+Using the `rly` binary, initialize the `relayer` service.
+
+```sh
+rly config init --home .relayer
+```
+
+Add each chain configuration to the `relayer` configuration.
+
+```sh
+rly chains add -f chora-1.json --home .relayer
+rly chains add -f chora-2.json --home .relayer
+```
+
+Add keys for each chain to the `relayer`.
+
+```sh
+rly keys add chora-1 --home .relayer
+rly keys add chora-2 --home .relayer
+```
+
+Initialize the light client for each chain.
+
+```sh
+rly light init chora-1 -f --home .relayer
+rly light init chora-2 -f --home .relayer
+```
+
+Generate the paths between chains.
+
+```sh
+rly paths generate chora-1 chora-2 transfer --port=transfer --home .relayer
+```
+
+Start the `relayer` service.
+
+```sh
+rly start transfer --home .relayer
+```

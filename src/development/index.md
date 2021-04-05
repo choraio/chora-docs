@@ -10,9 +10,9 @@ In order to run blockchain clients built with the Cosmos SDK, you will need the 
 
 - [Go >= 1.15](https://golang.org/doc/install)
 
-In order to run the `relayer` service, you will need the following:
+<!-- In order to run the `relayer` service, you will need the following:
 
-- [Starport >= 0.15](https://github.com/tendermint/starport)
+- [Starport >= 0.15](https://github.com/tendermint/starport) -->
 
 ## Installation
 
@@ -54,7 +54,7 @@ After you have cloned the remote repository, change to the local directory.
 cd regen-ledger
 ```
 
-Within the local repository, switch to the latest release candidate (`v1.0.0-rc0`).
+Within the local repository, switch to the latest release version (`v1.0.0-rc0`).
 
 ```sh
 git checkout v1.0.0-rc0
@@ -68,6 +68,30 @@ make install
 
 Now that the `regen` binary is installed, you are ready to start and run `regen-ledger`.
 
-## What's Next?
+### Install Relayer
 
-Now that you have the binaries installed for running `chora-chain` and `regen-ledger` (`chorad` and `regen` respectively), you are ready to begin testing the `ibc` module.
+From your working directory, clone the remote repository for [relayer](https://github.com/cosmos/relayer).
+
+```sh
+git clone https://github.com/cosmos/relayer
+```
+
+After you have cloned the remote repository, change to the local directory.
+
+```sh
+cd relayer
+```
+
+Within the local repository, switch to the latest release version (`v0.9.2`).
+
+```sh
+git checkout v0.9.2
+```
+
+After switching versions, run the following command to install the `rly` binary.
+
+```sh
+make install
+```
+
+Now that the `rly` binary is installed, you are ready to start and run the `relayer`.
