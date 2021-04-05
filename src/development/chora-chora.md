@@ -100,18 +100,23 @@ Using the `rly` binary, initialize the `relayer` service.
 rly config init --home .relayer
 ```
 
-Add each chain configuration to the `relayer` configuration.
+Add `chains` to the `relayer` configuration.
 
 ```sh
-rly chains add -f chora-1.json --home .relayer
-rly chains add -f chora-2.json --home .relayer
+rly config add-chains config/chains --home .relayer
 ```
 
-Add keys for each chain to the `relayer`.
+Add keys for each chain for the `relayer`.
 
 ```sh
 rly keys add chora-1 --home .relayer
 rly keys add chora-2 --home .relayer
+```
+
+Add `paths` to the `relayer` configuration.
+
+```sh
+rly config add-paths config/paths --home .relayer
 ```
 
 Initialize the light client for each chain.
@@ -121,14 +126,12 @@ rly light init chora-1 -f --home .relayer
 rly light init chora-2 -f --home .relayer
 ```
 
-Generate the paths between chains.
-
-```sh
-rly paths generate chora-1 chora-2 transfer --port=transfer --home .relayer
-```
-
 Start the `relayer` service.
 
 ```sh
-rly start transfer --home .relayer
+rly start blog --home .relayer
 ```
+
+## Testing IBC
+
+...
