@@ -1,6 +1,6 @@
-# Chora <-> Regen
+# IBC Test 3
 
-In this section, you will testing the `ibc` module using `chora-chain` and `regen-ledger`.
+In this section, you will testing the `ibc` module using `chora-chain` and `regen-ledger`. At the moment, `regen-ledger` is not setup to be used with `starport`, which means we will need to do a manual setup like we did in the previous test ("IBC Test 2").
 
 ## Run Chora Chain
 
@@ -87,5 +87,9 @@ regen start --grpc.address 0.0.0.0:9191 --p2p.laddr tcp://127.0.0.1:26658 --rpc.
 ```
 
 ## Run Chain Relayer
+
+...
+
+## Testing IBC
 
 ...

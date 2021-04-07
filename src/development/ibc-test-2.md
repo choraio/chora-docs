@@ -1,6 +1,6 @@
-# Chora <-> Chora
+# IBC Test 2
 
-In this section, you will testing the `ibc` module using two instances of `chora-chain`.
+In this section, you will testing the `ibc` module using two instances of `chora-chain`. This test is essentially the same as the previous test ("IBC Test 1") but without using `starport`.
 
 ## Run First Chain
 
@@ -109,8 +109,8 @@ rly config add-chains config/chains --home .relayer
 Add keys for each chain for the `relayer`.
 
 ```sh
-rly keys add chora-1 --home .relayer
-rly keys add chora-2 --home .relayer
+rly keys add chora-1 chora-1-light --home .relayer
+rly keys add chora-2 chora-2-light --home .relayer
 ```
 
 Add `paths` to the `relayer` configuration.
@@ -129,7 +129,7 @@ rly light init chora-2 -f --home .relayer
 Start the `relayer` service.
 
 ```sh
-rly start blog --home .relayer
+rly start transfer --home .relayer
 ```
 
 ## Testing IBC

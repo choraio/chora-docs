@@ -63,8 +63,10 @@ module.exports = {
           collapsable: false,
           children: [
             '',
-            '/development/chora-chora.md',
-            '/development/chora-regen.md',
+            '/development/installation',
+            '/development/ibc-test-1.md',
+            '/development/ibc-test-2.md',
+            '/development/ibc-test-3.md',
           ]
         }
       ],
