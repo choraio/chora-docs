@@ -1,5 +1,4 @@
-
-# Green NFT
+# Overview
 
 The current focus of the project is research and development for the [Green NFT Hackathon](https://gitcoin.co/hackathon/green-nft/onboard).
 
@@ -23,12 +22,12 @@ Within the Cosmos ecosystem, blockchains are able to communicate with each other
 
 What about the purchase of "eco credits" from outside the Cosmos ecosystem?
 
-[Gravity Bridge](https://github.com/cosmos/gravity-bridge) is a blockchain bridge between the Cosmos ecosystem and Ethereum that currently supports the transfer ERC20 assets originating on Ethereum to a Cosmos based blockchain and back to Ethereum. The ability to transfer the equivelant of an ERC20 asset originating on a Cosmos based blockchain to an ERC20 representation on Ethereum is currently in development.
+[Gravity Bridge](https://github.com/cosmos/gravity-bridge) is a blockchain bridge between the Cosmos ecosystem and Ethereum that currently supports the transfer of ERC20 assets originating on Ethereum to a Cosmos-based blockchain and back to Ethereum. The ability to transfer the equivelant of an ERC20 asset originating on a Cosmos-based blockchain to an ERC20 representation on Ethereum is currently in development.
 
 ...
 
 ## Chora Chain
 
-In order to better understand communication between blockchains within the Cosmos ecosytem, we will be experimenting with our own application specific blockchain called `chora-chain`, which is also built with the [Cosmos SDK](https://github.com/cosmos/cosmos-sdk).
+In order to better understand communication between blockchains within the Cosmos ecosytem, we will be experimenting with our own application specific blockchain called `chora-chain`, which is also built with the [Cosmos SDK](https://github.com/cosmos/cosmos-sdk). See [development](/development) for more information.
 
 ...

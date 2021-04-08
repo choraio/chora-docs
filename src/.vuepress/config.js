@@ -53,20 +53,33 @@ module.exports = {
           collapsable: false,
           children: [
             '',
-            '/research/green-nft.md',
+          ]
+        },
+        {
+          title: 'Green NFT',
+          collapsable: false,
+          children: [
+            '/research/green-nft/overview',
           ]
         }
       ],
       '/development/': [
         {
-          title: 'Testing',
+          title: 'Welcome',
           collapsable: false,
           children: [
             '',
-            '/development/installation',
-            '/development/ibc-test-1.md',
-            '/development/ibc-test-2.md',
-            '/development/ibc-test-3.md',
+          ]
+        },
+        {
+          title: 'Testing',
+          collapsable: false,
+          children: [
+            '/development/testing/overview',
+            '/development/testing/installation',
+            '/development/testing/ibc-test-1',
+            '/development/testing/ibc-test-2',
+            '/development/testing/ibc-test-3',
           ]
         }
       ],

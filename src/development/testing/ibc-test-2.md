@@ -129,7 +129,7 @@ rly light init chora-2 -f --home .relayer
 Start the `relayer` service.
 
 ```sh
-rly start transfer --home .relayer
+rly start ecodex --home .relayer
 ```
 
 ## Testing IBC

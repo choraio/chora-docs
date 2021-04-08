@@ -2,7 +2,7 @@
 
 [Chora](https://chora.io/) is a research project exploring the role of technology in regeneration with a focus on the use of decentralized blockchain protocols for commons governance and regenerative economics.
 
-## Research Overview
+## Research Topics
 
 primary research topics:
 
@@ -17,7 +17,7 @@ additional research topics:
 - microlending services
 - (universal) basic income
 
-## Blockchain Protocols
+<!-- ## Blockchain Protocols
 
 ...
 
@@ -27,10 +27,10 @@ additional research topics:
 
 ## Regenerative Economics
 
-...
+... -->
 
 ## Related Projects
 
 - [Regen Network](https://www.regen.network/)
 - [The Commons Stack](https://commonsstack.org/)
-- [P2P Foundation](https://wiki.p2pfoundation.net/Main_Page)
+<!-- - [P2P Foundation](https://wiki.p2pfoundation.net/Main_Page) -->
