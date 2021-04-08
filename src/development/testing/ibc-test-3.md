@@ -1,6 +1,6 @@
 # IBC Test 3
 
-In this section, you will testing the `ibc` module using `chora-chain` and `regen-ledger`. At the moment, `regen-ledger` is not setup to be used with `starport`, which means we will need to do a manual setup like we did in the previous test ("IBC Test 2").
+In this section, you will testing the `ibc` module using `chora-chain` and `regen-ledger`. At the moment, `regen-ledger` is not set up to be used with `starport`, which means we will need to do a setup like we did in the previous test ("IBC Test 2").
 
 ## Run Chora Chain
 

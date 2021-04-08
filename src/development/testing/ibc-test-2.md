@@ -25,7 +25,7 @@ MY_VALIDATOR_ADDRESS=$(chorad keys show $KEY_NAME --home .chora-1 -a)
 Now that you have generated a validator key, you will need to add the public address to the genesis file along with an initial amount of stake.
 
 ```sh
-chorad add-genesis-account $MY_VALIDATOR_ADDRESS 1000000stake --home .chora-1 
+chorad add-genesis-account $MY_VALIDATOR_ADDRESS 10000000stake --home .chora-1 
 ```
 
 Then you will need to create the genesis transaction.
@@ -69,7 +69,7 @@ MY_VALIDATOR_ADDRESS=$(chorad keys show $KEY_NAME --home .chora-2 -a)
 Now that you have generated a validator key, you will need to add the public address to the genesis file along with an initial amount of stake.
 
 ```sh
-chorad add-genesis-account $MY_VALIDATOR_ADDRESS 1000000stake --home .chora-2 
+chorad add-genesis-account $MY_VALIDATOR_ADDRESS 10000000stake --home .chora-2 
 ```
 
 Then you will need to create the genesis transaction.
@@ -106,17 +106,17 @@ Add `chains` to the `relayer` configuration.
 rly config add-chains config/chains --home .relayer
 ```
 
-Add keys for each chain for the `relayer`.
-
-```sh
-rly keys add chora-1 chora-1-light --home .relayer
-rly keys add chora-2 chora-2-light --home .relayer
-```
-
 Add `paths` to the `relayer` configuration.
 
 ```sh
 rly config add-paths config/paths --home .relayer
+```
+
+Add keys for each chain for the `relayer`. Note that the same keys used for the validators are being used for the light client operators to simplify the number of steps for testing purposes.
+
+```sh
+rly keys restore chora-1 chora-1-validator "[mnemonic]" --home .relayer
+rly keys restore chora-2 chora-2-validator "[mnemonic]" --home .relayer
 ```
 
 Initialize the light client for each chain.
@@ -126,9 +126,15 @@ rly light init chora-1 -f --home .relayer
 rly light init chora-2 -f --home .relayer
 ```
 
-Start the `relayer` service.
+Link light clients and complete `relayer` configuration.
 
 ```sh
+rly tx link ecodex --home .relayer
+```
+
+Start the `relayer` service.
+
+```
 rly start ecodex --home .relayer
 ```
 

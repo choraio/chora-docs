@@ -49,10 +49,10 @@ From the local directory, switch to the latest release version (`v1.0.0-rc0`).
 git checkout v1.0.0-rc0
 ```
 
-After switching versions, run the following command to install the `regen` binary.
+After switching versions, run the following command to install the `regen` binary. *Note the use of the `EXPERIMENTAL=true` option here, which enables the custom modules built within `regen-ledger`.*
 
 ```sh
-make install
+EXPERIMENTAL=true make install
 ```
 
 Now that the `regen` binary is installed, you are ready to start and run `regen-ledger`.
