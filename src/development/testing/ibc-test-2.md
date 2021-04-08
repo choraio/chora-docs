@@ -25,7 +25,7 @@ MY_VALIDATOR_ADDRESS=$(chorad keys show $KEY_NAME --home .chora-1 -a)
 Now that you have generated a validator key, you will need to add the public address to the genesis file along with an initial amount of stake.
 
 ```sh
-chorad add-genesis-account $MY_VALIDATOR_ADDRESS 10000000stake --home .chora-1 
+chorad add-genesis-account $MY_VALIDATOR_ADDRESS 5000000stake --home .chora-1 
 ```
 
 Then you will need to create the genesis transaction.
@@ -69,7 +69,7 @@ MY_VALIDATOR_ADDRESS=$(chorad keys show $KEY_NAME --home .chora-2 -a)
 Now that you have generated a validator key, you will need to add the public address to the genesis file along with an initial amount of stake.
 
 ```sh
-chorad add-genesis-account $MY_VALIDATOR_ADDRESS 10000000stake --home .chora-2 
+chorad add-genesis-account $MY_VALIDATOR_ADDRESS 5000000stake --home .chora-2 
 ```
 
 Then you will need to create the genesis transaction.
@@ -103,13 +103,13 @@ rly config init --home .relayer
 Add `chains` to the `relayer` configuration.
 
 ```sh
-rly config add-chains config/chains --home .relayer
+rly config add-chains config/chora-chora/chains --home .relayer
 ```
 
 Add `paths` to the `relayer` configuration.
 
 ```sh
-rly config add-paths config/paths --home .relayer
+rly config add-paths config/chora-chora/paths --home .relayer
 ```
 
 Add keys for each chain for the `relayer`. Note that the same keys used for the validators are being used for the light client operators to simplify the number of steps for testing purposes.

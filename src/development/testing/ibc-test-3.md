@@ -23,7 +23,7 @@ MY_VALIDATOR_ADDRESS=$(chorad keys show $KEY_NAME -a)
 Now that you have generated a validator keypair, you will need to add the public address to the genesis file along with an initial amount of stake.
 
 ```sh
-chorad add-genesis-account $MY_VALIDATOR_ADDRESS 1000000stake
+chorad add-genesis-account $MY_VALIDATOR_ADDRESS 5000000stake
 ```
 
 Then you will need to create the genesis transaction.
@@ -65,7 +65,7 @@ MY_VALIDATOR_ADDRESS=$(regen keys show $KEY_NAME -a)
 Now that you have generated a validator keypair, you will need to add the public address to the genesis file along with an initial amount of stake.
 
 ```sh
-regen add-genesis-account $MY_VALIDATOR_ADDRESS 1000000stake
+regen add-genesis-account $MY_VALIDATOR_ADDRESS 5000000stake
 ```
 
 Then you will need to create the genesis transaction.
@@ -88,8 +88,62 @@ regen start --grpc.address 0.0.0.0:9191 --p2p.laddr tcp://127.0.0.1:26658 --rpc.
 
 ## Run Chain Relayer
 
-...
+*Note: The following commands should be run from within the `chora-chain` repository.*
+
+Using the `rly` binary, initialize the `relayer` service.
+
+```sh
+rly config init
+```
+
+Add `chains` to the `relayer` configuration.
+
+```sh
+rly config add-chains config/chora-regen/chains
+```
+
+Add `paths` to the `relayer` configuration.
+
+```sh
+rly config add-paths config/chora-regen/paths
+```
+
+Add keys for each chain for the `relayer`. Note that the same keys used for the validators are being used for the light client operators to simplify the number of steps for testing purposes.
+
+```sh
+rly keys restore chora chora-validator "[mnemonic]"
+rly keys restore regen regen-validator "[mnemonic]"
+```
+
+Initialize the light client for each chain.
+
+```sh
+rly light init chora -f
+rly light init regen -f
+```
+
+Link light clients and complete `relayer` configuration.
+
+```sh
+rly tx link ecodex
+```
+
+::: danger ERROR
+The `ecodex` module has not (yet) been implemented in `regen-ledger`, which means the last command will not complete successfully. You should see the following error:
+
+```
+I[2021-04-08|10:54:16.912] failed to execute message; message index: 1: could not retrieve module from port-id: ports/ecodex: capability not found: invalid request 
+I[2021-04-08|10:54:16.912] retrying transaction...                      
+Error: ! Channel failed: [chora]chan{channel-0}port{ecodex} -> [regen]chan{}port{ecodex}
+```
+:::
+
+<!-- Start the `relayer` service.
+
+```
+rly start ecodex
+```
 
 ## Testing IBC
 
-...
+... -->

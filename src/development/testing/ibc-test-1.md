@@ -9,7 +9,7 @@ In this section, you will be testing the `ibc` module and two instances of `chor
 Initialize and start the node for the first chain (`chora-1`).
 
 ```sh
-starport serve -c config/starport/chora-1.yml
+starport serve -c config/chora-chora/starport/chora-1.yml
 ```
 
 ## Run Second Chain
@@ -19,7 +19,7 @@ starport serve -c config/starport/chora-1.yml
 Initialize and start the node for the second chain (`chora-2`).
 
 ```sh
-starport serve -c config/starport/chora-2.yml
+starport serve -c config/chora-chora/starport/chora-2.yml
 ```
 
 ## Run Chain Relayer
