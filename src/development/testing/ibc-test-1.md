@@ -1,6 +1,8 @@
 # IBC Test 1
 
-In this section, you will be testing the `ibc` module and two instances of `chora-chain`. The `chora-chain` application was scaffolded using `starport`, so this first test will be relatively simple as most of the configuration and startup steps are done for you.
+In this example, you will be testing the `ibc` module using two instances of `chora-chain`.
+
+`chora-chain` was scaffolded using `starport`, so this first example will be relatively simple as most of the configuration and setup is already done for you.
 
 ## Run First Chain
 
@@ -24,12 +26,10 @@ starport serve -c config/chora-chora/starport/chora-2.yml
 
 ## Run Chain Relayer
 
-*Note: The following commands should be run from within the `chora-chain` repository.*
-
-Configure the `relayer` using the `advanced` flap option.
+Configure the `relayer` using the `advanced` flag option.
 
 ```sh
-starport relayer configure --advanced --source-rpc "http://0.0.0.0:26657" --source-faucet "http://0.0.0.0:4500" --source-port "ecodex" --source-version "ecodex-1" --target-rpc "http://0.0.0.0:26659" --target-faucet "http://0.0.0.0:4501" --target-port "ecodex" --target-version "ecodex-1"
+starport relayer configure --advanced --source-rpc "http://0.0.0.0:26657" --source-faucet "http://0.0.0.0:4500" --source-port "transfer" --source-version "ics20-1" --target-rpc "http://0.0.0.0:26659" --target-faucet "http://0.0.0.0:4501" --target-port "transfer" --target-version "ics20-1"
 ```
 
 Start the `relayer` and begin communication between chains.
@@ -38,6 +38,6 @@ Start the `relayer` and begin communication between chains.
 starport relayer connect
 ```
 
-## Testing IBC
+## Test Transfer
 
 ...

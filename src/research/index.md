@@ -27,10 +27,10 @@ additional research topics:
 
 ## Regenerative Economics
 
-... -->
+...
 
 ## Related Projects
 
 - [Regen Network](https://www.regen.network/)
 - [The Commons Stack](https://commonsstack.org/)
-<!-- - [P2P Foundation](https://wiki.p2pfoundation.net/Main_Page) -->
+- [P2P Foundation](https://wiki.p2pfoundation.net/Main_Page) -->
