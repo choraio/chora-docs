@@ -1,6 +1,6 @@
 # IBC Test 2
 
-In this example, you will testing the `ibc` module using two instances of `chora-chain`.
+In this example, you will be testing the `ibc` module using two instances of `chora-chain`.
 
 This example essentially leads to the same results as the previous example ("IBC Test 1") but it does not use the simplified `starport` commands and configuration.
 

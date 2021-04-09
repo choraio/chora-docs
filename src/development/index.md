@@ -12,4 +12,4 @@ The chora project is a research project. All tools and services being built with
 
 ### Ecodex Module
 
-The `ecodex` module was originally built from the [interchange exchange tutorial](https://tutorials.cosmos.network/interchain-exchange/tutorial/00-intro.html) and is currently being modified to support the purchasing of "eco credits" (or vouchers for locked "eco credits") using the `ecocredit` module within [`regen-ledger`](https://github.com/regen-network/regen-ledger).
+The `ecodex` module was originally built from the [interchange exchange tutorial](https://tutorials.cosmos.network/interchain-exchange/tutorial/00-intro.html) and is currently being modified to support the purchasing of "eco credits" (or more specifically vouchers for locked "eco credits") using the `ecocredit` module within [`regen-ledger`](https://github.com/regen-network/regen-ledger).

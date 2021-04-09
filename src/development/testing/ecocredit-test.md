@@ -1,6 +1,6 @@
-# Eco Credits
+# Ecocredit Test
 
-In this example, you will testing the `ecocredit` module using `regen-ledger`.
+In this example, you will be testing the `ecocredit` module using `regen-ledger`.
 
 ## Run Regen Chain
 
