@@ -21,13 +21,13 @@ KEY_NAME=chora-1-validator
 
 chorad keys add $KEY_NAME --home .chora-1
 
-MY_VALIDATOR_ADDRESS=$(chorad keys show $KEY_NAME -a --home .chora-1)
+VALIDATOR_ADDRESS=$(chorad keys show $KEY_NAME -a --home .chora-1)
 ```
 
 Now that you have generated a validator key, you will need to add the public address to the genesis file along with an initial amount of stake.
 
 ```sh
-chorad add-genesis-account $MY_VALIDATOR_ADDRESS 5000000stake --home .chora-1 
+chorad add-genesis-account $VALIDATOR_ADDRESS 5000000stake --home .chora-1 
 ```
 
 Then you will need to create the genesis transaction.
@@ -65,13 +65,13 @@ KEY_NAME=chora-2-validator
 
 chorad keys add $KEY_NAME --home .chora-2
 
-MY_VALIDATOR_ADDRESS=$(chorad keys show $KEY_NAME -a --home .chora-2)
+VALIDATOR_ADDRESS=$(chorad keys show $KEY_NAME -a --home .chora-2)
 ```
 
 Now that you have generated a validator key, you will need to add the public address to the genesis file along with an initial amount of stake.
 
 ```sh
-chorad add-genesis-account $MY_VALIDATOR_ADDRESS 5000000stake --home .chora-2 
+chorad add-genesis-account $VALIDATOR_ADDRESS 5000000stake --home .chora-2 
 ```
 
 Then you will need to create the genesis transaction.

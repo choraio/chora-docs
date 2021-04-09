@@ -21,13 +21,13 @@ KEY_NAME=chora-validator
 
 chorad keys add $KEY_NAME --home .chora
 
-MY_VALIDATOR_ADDRESS=$(chorad keys show $KEY_NAME -a --home .chora)
+VALIDATOR_ADDRESS=$(chorad keys show $KEY_NAME -a --home .chora)
 ```
 
 Now that you have generated a validator keypair, you will need to add the public address to the genesis file along with an initial amount of stake.
 
 ```sh
-chorad add-genesis-account $MY_VALIDATOR_ADDRESS 5000000stake --home .chora
+chorad add-genesis-account $VALIDATOR_ADDRESS 5000000stake --home .chora
 ```
 
 Then you will need to create the genesis transaction.
@@ -65,13 +65,13 @@ KEY_NAME=regen-validator
 
 regen keys add $KEY_NAME --home .regen
 
-MY_VALIDATOR_ADDRESS=$(regen keys show $KEY_NAME -a --home .regen)
+VALIDATOR_ADDRESS=$(regen keys show $KEY_NAME -a --home .regen)
 ```
 
 Now that you have generated a validator keypair, you will need to add the public address to the genesis file along with an initial amount of stake.
 
 ```sh
-regen add-genesis-account $MY_VALIDATOR_ADDRESS 5000000stake --home .regen
+regen add-genesis-account $VALIDATOR_ADDRESS 5000000stake --home .regen
 ```
 
 Then you will need to create the genesis transaction.

@@ -80,6 +80,7 @@ module.exports = {
             '/development/testing/ibc-test-1',
             '/development/testing/ibc-test-2',
             '/development/testing/ibc-test-3',
+            '/development/testing/eco-credits',
           ]
         }
       ],
