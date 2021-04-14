@@ -1,4 +1,4 @@
-# Ecocredit Test
+# Ecocredit Test 1
 
 In this example, you will be testing the `ecocredit` module using `regen-ledger`.
 
@@ -31,13 +31,13 @@ USER_ADDRESS=$(regen keys show regen-user -a --home .regen)
 Create class...
 
 ```sh
-regen tx ecocredit create-class $VALIDATOR_ADDRESS $VALIDATOR_ADDRESS dGVzdCBkYXRh --from $VALIDATOR_ADDRESS --chain-id regen
+regen tx ecocredit create-class $VALIDATOR_ADDRESS $VALIDATOR_ADDRESS dGVzdCBkYXRh --from $VALIDATOR_ADDRESS --chain-id regen --home .regen
 ```
 
 Query class...
 
 ```sh
-regen q ecocredit class-info 1
+regen q ecocredit class-info 1 --home .regen
 ```
 
 ::: tip EXAMPLE OUTPUT
@@ -54,13 +54,13 @@ info:
 Create batch...
 
 ```sh
-regen tx ecocredit create-batch $VALIDATOR_ADDRESS 1 dGVzdCBkYXRh '[{recipient: '$VALIDATOR_ADDRESS', tradable_units: "10", retired_units: "0"}]' --from $VALIDATOR_ADDRESS --chain-id regen
+regen tx ecocredit create-batch $VALIDATOR_ADDRESS 1 dGVzdCBkYXRh '[{recipient: '$VALIDATOR_ADDRESS', tradable_units: "10", retired_units: "0"}]' --from $VALIDATOR_ADDRESS --chain-id regen --home .regen
 ```
 
 Query batch...
 
 ```sh
-regen q ecocredit batch-info [batch_denom]
+regen q ecocredit batch-info [batch_denom] --home .regen
 ```
 
 ::: tip EXAMPLE OUTPUT
@@ -77,7 +77,7 @@ info:
 Check balance...
 
 ```sh
-regen q ecocredit balance [batch_denom] VALIDATOR_ADDRESS
+regen q ecocredit balance [batch_denom] VALIDATOR_ADDRESS --home .regen
 ```
 
 ::: warning EMPTY
@@ -90,13 +90,13 @@ tradable_units: "0"
 Send credits...
 
 ```sh
-regen tx ecocredit send $USER_ADDRESS '[{batch_denom: "[batch_denom]", tradable_units: "5", retired_units: "0"}]' --from $VALIDATOR_ADDRESS --chain-id regen
+regen tx ecocredit send $USER_ADDRESS '[{batch_denom: "[batch_denom]", tradable_units: "5", retired_units: "0"}]' --from $VALIDATOR_ADDRESS --chain-id regen --home .regen
 ```
 
 Check balance...
 
 ```sh
-regen q ecocredit balance [batch_denom] USER_ADDRESS
+regen q ecocredit balance [batch_denom] USER_ADDRESS --home .regen
 ```
 
 ::: warning EMPTY
@@ -109,13 +109,13 @@ tradable_units: "0"
 Retire credits...
 
 ```sh
-regen tx ecocredit retire '[{batch_denom: "[batch_denom]", units: "5"}]' --from $VALIDATOR_ADDRESS --chain-id regen
+regen tx ecocredit retire '[{batch_denom: "[batch_denom]", units: "5"}]' --from $VALIDATOR_ADDRESS --chain-id regen --home .regen
 ```
 
 Check supply...
 
 ```sh
-regen q ecocredit supply [batch_denom]
+regen q ecocredit supply [batch_denom] --home .regen
 ```
 
 ::: tip EXAMPLE OUTPUT
