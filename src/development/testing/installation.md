@@ -43,10 +43,10 @@ After you have cloned the remote repository, change to the local directory.
 cd regen-ledger
 ```
 
-From the local directory, switch to the latest release version (`v1.0.0-rc0`).
+From the local directory, switch to the latest release version (`v1.0.0`).
 
 ```sh
-git checkout v1.0.0-rc0
+git checkout v1.0.0
 ```
 
 After switching versions, run the following command to install the `regen` binary. *Note the use of the `EXPERIMENTAL=true` option here, which enables the custom modules built within `regen-ledger`.*

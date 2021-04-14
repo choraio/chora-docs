@@ -2,9 +2,9 @@
 
 The current focus of the project is research and development for the [Green NFT Hackathon](https://gitcoin.co/hackathon/green-nft/onboard).
 
-In response to concerns around the carbon footprint of minting and exchanging NFTs on the current Proof-of-Work version of Ethereum, conscientious artists and platforms are looking for ways to offset their carbon footprint by making use of infrastructure that is more energy efficient.
+In response to concerns around the carbon footprint of minting and exchanging NFTs on the current Proof-of-Work version of Ethereum, conscientious artists and platforms are looking for ways to offset their carbon footprint or to make use of infrastructure that is more energy efficient.
 
-Within the Ethereum ecosystem, there are scaling solutions that will reduce the energy cost as well as plans to switch Ethereum to a Proof-of-Stake consensus mechanism, which means partial solutions are already underway. Although significantly less energy will be consumed with such improvements, there will still always be an energy cost, which is where the purchasing of "eco credits" comes in.
+Within the Ethereum ecosystem, there are several scaling solutions currently being implemented and there are plans to switch Ethereum to a Proof-of-Stake consensus mechanism. Although significantly less energy will be consumed with such improvements, there will still always be an energy cost.
 
 ## Regen Network
 
@@ -22,16 +22,16 @@ Regen Network is developing a custom `ecocredit` module within `regen-ledger` th
 
 ## Gravity Bridge
 
-What about the purchase of "eco credits" from outside the Cosmos ecosystem?
+What about the purchasing of "eco credits" from Ethereum?
 
-[Gravity Bridge](https://github.com/cosmos/gravity-bridge) is a blockchain bridge between the Cosmos ecosystem (Cosmos-based blockchains) and the Ethereum blockchain that supports the transfer of ERC20 assets originating on Ethereum to a Cosmos-based blockchain and back to Ethereum. The ability to transfer the equivelant of an ERC20 asset originating on a Cosmos-based blockchain to an ERC20 representation on Ethereum is currently in development. How might Gravity Bridge be expanded to support the purchasing of "eco credits"?
+[Gravity Bridge](https://github.com/cosmos/gravity-bridge) is a blockchain bridge between the Cosmos ecosystem and the Ethereum blockchain that supports the transfer of ERC20 tokens originating on Ethereum to a Cosmos-based blockchain and then back to Ethereum. The ability to transfer the equivelant of an ERC20 token originating on a Cosmos-based blockchain to an ERC20 token on Ethereum is currently in development.
 
-...
+How might Gravity Bridge be extended to support the purchasing of "eco credits"?
 
 ## Chora Chain
 
-In order to better understand communication between blockchains within the Cosmos ecosytem, we are currently experimenting with our own application specific blockchain called `chora-chain`, which is also built with the [Cosmos SDK](https://github.com/cosmos/cosmos-sdk). We are currently developing a custom `ecodex` module that will allow for the purchasing of "eco credits" minted on `regen-ledger` (or more specifically vouchers for locked "eco credits") from other Cosmos-based blockchains.
+In order to better understand communication between blockchains within the Cosmos ecosytem, we are currently experimenting with our own application specific blockchain called `chora-chain`, which is also being built with the [Cosmos SDK](https://github.com/cosmos/cosmos-sdk).
 
-See [development](/development) for more information.
+We are currently working on a proof-of-concept for a custom `ecodex` module that will allow for the purchasing of "eco credits" (or more specifically vouchers for locked "eco credits") minted on `regen-ledger` from other Cosmos-based blockchains.
 
-...
+Please see [development](/development) for more information.
