@@ -4,19 +4,19 @@ The current focus of the project is research and development for the [Green NFT 
 
 In response to concerns around the carbon footprint of minting and exchanging NFTs on the current Proof-of-Work version of Ethereum, conscientious artists and platforms are looking for ways to offset their carbon footprint or to make use of infrastructure that is more energy efficient.
 
-Within the Ethereum ecosystem, there are several scaling solutions currently being implemented and there are plans to switch Ethereum to a Proof-of-Stake consensus mechanism. Although significantly less energy will be consumed with such improvements, there will still always be an energy cost.
+Within the Ethereum ecosystem, there are several scaling solutions currently being implemented and there are plans to switch Ethereum to a Proof-of-Stake consensus mechanism. Although significantly less energy will be consumed with such improvements, there will always be an energy cost.
 
 ## Regen Network
 
 [Regen Network](https://www.regen.network/) is a project focused on building ecosystem services and credits using an application specific blockchain. Regen Network's blockchain [`regen-ledger`](https://github.com/regen-network/regen-ledger) is built with the [Cosmos SDK](https://github.com/cosmos/cosmos-sdk) and will be a Cosmos zone within the Cosmos ecosystem.
 
-Within the Cosmos ecosystem, blockchains are able to communicate with each other using a protocol known as "inter-blockchain communication protocol" (or [IBC](https://ibcprotocol.org/)), which was recently implemented as a module within the Cosmos SDK. Regen Network is planning to launch their mainnet version of `regen-ledger` mid-April with the `ibc` module enabled, which means other Cosmos-based blockchains with the `ibc` module enabled will be able to communicate with `regen-ledger`.
+Within the Cosmos ecosystem, blockchains are able to communicate with each other using a protocol known as "inter-blockchain communication protocol" (or [IBC](https://ibcprotocol.org/)), which has recently been added as a module within the Cosmos SDK. Regen Network recently launched their mainnet version of `regen-ledger` with the `ibc` module implemented, which means other Cosmos-based blockchains with the `ibc` module enabled will soon be able to communicate with `regen-ledger` once the `ibc` module has been enabled as part of an upgrade through an on-chain governance process.
 
 Regen Network is developing a custom `ecocredit` module within `regen-ledger` that will link "eco credits" to verifiable data directly related to ecological health. Anyone looking to offset their carbon footprint will be able to purchase "eco credits" on the `regen-ledger` blockchain and, in combination with the `ibc` module, anyone could potentially purchase "eco credits" (or more specifically vouchers for locked "eco credits") from `regen-ledger` through other Cosmos-based blockchains.
 
 ---
 
-*Note: The `ecocredit` module will not be enabled at the time of launch but rather it will be enabled as part of an upgrade through an on-chain governance process.*
+*Note: Like the `ibc` module, the `ecocredit` module will not be enabled at the time of launch but rather it will be enabled as part of an upgrade through an on-chain governance process.*
 
 ---
 
