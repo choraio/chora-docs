@@ -17,20 +17,6 @@ additional research topics:
 - microlending services
 - (universal) basic income
 
-<!-- ## Blockchain Protocols
+## Current Research
 
-...
-
-## Commons Governance
-
-...
-
-## Regenerative Economics
-
-...
-
-## Related Projects
-
-- [Regen Network](https://www.regen.network/)
-- [The Commons Stack](https://commonsstack.org/)
-- [P2P Foundation](https://wiki.p2pfoundation.net/Main_Page) -->
+The current focus of the project is research for the [Green NFT Hackathon](https://gitcoin.co/hackathon/green-nft/onboard).

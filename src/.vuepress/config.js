@@ -59,7 +59,9 @@ module.exports = {
           title: 'Green NFT',
           collapsable: false,
           children: [
-            '/research/green-nft/overview',
+            '/research/green-nft/introduction',
+            '/research/green-nft/ecodex-module',
+            '/research/green-nft/econft-module',
           ]
         }
       ],
